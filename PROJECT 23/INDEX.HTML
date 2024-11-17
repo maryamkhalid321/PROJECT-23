@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object and Array Example for Beginners</title>
+</head>
+<body>
+    <h1>Object and Array Example</h1>
+    <div id="output"></div>
+
+    <script type="text/javascript">
+        // Define an object with some properties
+        const mathValues = {
+            absolute: Math.abs(-20.7),
+            acos: Math.acos(-1),
+            atan: Math.atan(0.5),
+            random: Math.random(),
+            pi: Math.PI,
+            rounded: Math.round(3.6)
+        };
+
+        // Define an array with some values
+        const numbers = [-20.7, 0.5, 3.6];
+
+        // Create a new array with the absolute values
+        const absValues = numbers.map(num => Math.abs(num));
+
+        // Create a new array with the sine of each number (converted to radians)
+        const sineValues = numbers.map(num => Math.sin(num * (Math.PI / 180)));
+
+        // Create a new array with the cosine of each number (converted to radians)
+        const cosineValues = numbers.map(num => Math.cos(num * (Math.PI / 180)));
+
+        // Create a new array with the tangent of each number (converted to radians)
+        const tangentValues = numbers.map(num => Math.tan(num * (Math.PI / 180)));
+
+        // Display the results in the HTML document
+        const outputDiv = document.getElementById('output');
+        outputDiv.innerHTML = `
+            <strong>Object Data Structure:</strong><br>
+            Absolute Value: ${mathValues.absolute}<br>
+            Arccos(-1): ${mathValues.acos}<br>
+            Arctangent(0.5): ${mathValues.atan}<br>
+            Random Value: ${mathValues.random}<br>
+            Pi Value: ${mathValues.pi}<br>
+            Rounded Value (3.6): ${mathValues.rounded}<br><br>
+
+            <strong>Array Data Structure:</strong><br>
+            Absolute Values Array: ${absValues}<br>
+            Sine Values Array: ${sineValues}<br>
+            Cosine Values Array: ${cosineValues}<br>
+            Tangent Values Array: ${tangentValues}
+        `;
+    </script>
+</body>
+</html>
